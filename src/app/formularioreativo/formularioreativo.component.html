@@ -1,0 +1,10 @@
+<!-- Formularios Reativos -->
+<label>
+  Nome: <input type="text" [formControl]="nome">
+</label>
+<p>
+  <button (click)="atualizarNome()">Atualizar Nome</button>
+</p>
+<p>
+  valor: {{nome.value}}
+</p>

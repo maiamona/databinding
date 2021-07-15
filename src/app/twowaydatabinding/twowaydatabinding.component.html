@@ -1,0 +1,7 @@
+<label>Nome do curso</label>
+<input type="text" [value]="nomeCurso" (input)="nomeCurso = $event.target.value">
+<p>Nome do curso digitado foi {{nomeCurso}}</p>
+<br>
+
+<input type="text" [(ngModel)]="nomeCurso">
+<p>Nome do curso digitado foi {{nomeCurso}}</p>

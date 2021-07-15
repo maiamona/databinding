@@ -1,0 +1,54 @@
+<div class="container">
+  <h1>Formulário Pessoa</h1>
+  <form (ngSubmit)="enviar()" #pessoaForm="ngForm">
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input type="text" class="form-control" id="nome" required [(ngModel)]="pessoa.nome" name="nome" #nome="ngModel">
+    <div [hidden]="nome.valid || nome.pristine" class="alert alert-danger">
+Nome é obrigatório
+    </div>
+    </div>
+    <div class="form-group">
+      <label for="idade">Idade</label>
+      <input type="text" class="form-control" id="idade" required [(ngModel)]="pessoa.idade" name="idade" #idade>
+    </div>
+    <div class="form-group">
+      <label for="sexo">Sexo</label>
+      <input type="text" class="form-control" id="sexo" required [(ngModel)]="pessoa.sexo" name="sexo" #sexo>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" class="form-control" required [(ngModel)]="pessoa.email" name="email" #email="ngModel" appDiretivaemail>
+      <div *ngIf="email?.errors?.dominioValido" class="alert alert-danger">
+Dominio Errado
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success" [disabled]="!pessoaForm.form.valid">Enviar Formulario</button>
+  <button type="button" (click)="novaPessoa()" class="btn btn-default">Adicionar Pessoa</button>
+  </form>
+  <!-- {{diagnostico}} -->
+  {{nome.className}}
+
+<div [hidden]="!enviado">
+<div class="row">
+  <div class="col-xs-3">Nome:</div>
+  <div class="col-xs-9">
+    {{pessoa.nome}}
+  </div>
+  <div class="col-xs-3">Idade:</div>
+  <div class="col-xs-9">
+    {{pessoa.idade}}
+  </div>
+  <div class="col-xs-3">Sexo:</div>
+  <div class="col-xs-9">
+    {{pessoa.sexo}}
+  </div>
+  <!-- <div class="col-xs-3">Email:</div>
+  <div class="col-xs-9">
+    {{pessoa.email}}
+  </div> -->
+</div>
+</div>
+<br>
+<button class="btn btn-primary" (click)="enviado=false">Ocultar</button>
+</div>

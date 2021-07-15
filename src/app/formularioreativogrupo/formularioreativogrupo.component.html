@@ -1,0 +1,9 @@
+<form [formGroup]="pessoaForm" (ngSubmit)="EnviarValores()">
+<label>
+  Primeiro Nome: <input type="text" formControlName="primeiroNome">
+</label><br><br>
+<label>
+  Ultimo Nome: <input type="text" formControlName="ultimoNome">
+</label><br><br>
+<button type="submit" [disabled]="!pessoaForm.valid">Enviar Valores</button>
+</form>

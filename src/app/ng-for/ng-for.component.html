@@ -1,0 +1,10 @@
+<h3>Lista de Ferramentas</h3>
+<ul>
+  <li *ngFor="let ferramenta of ferramentas">{{ferramenta}}</li>
+</ul>
+<h3>Familia</h3>
+<ul>
+  <li *ngFor="let familia of familias; let i=index">
+    {{i}} - {{familia}}
+  </li>
+</ul>

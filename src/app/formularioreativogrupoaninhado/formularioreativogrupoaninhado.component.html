@@ -1,0 +1,60 @@
+<div class="container">
+<h1>Formulario Reativo Grupo Aninhado</h1>
+<form [formGroup]="dadosPessoais" (ngSubmit)="mostrarValores()">
+  <div class="form-group">
+  <label>
+    Nome: 
+  </label>
+  <input type="text" formControlName="nome" class="form-control">
+  <div *ngIf="f.nome.errors && (f.nome.dirty || f.nome.touched)" class="alert alert-danger">
+    <div *ngIf="f.nome.errors.required">Nome é Obrigatório</div>
+    </div>
+</div>
+<div class="form-group">
+  <label>
+    sobreNome: 
+  </label>
+  <input type="text" formControlName="sobreNome" class="form-control">
+</div>
+<div class="form-group">
+  <label>
+    Emael: 
+  </label>
+  <input type="text" formControlName="email" class="form-control">
+  <div *ngIf="f.email.errors && (f.email.dirty || f.email.touched)" class="alert alert-danger">
+    <div *ngIf="f.email.errors.required">Nome é Obrigatório</div>
+   <div *ngIf="!f.email.errors.dominioValido">Dominio Errado</div>
+  </div>
+</div>
+  <div formGroupName="endereco">
+    <label>
+      Rua: 
+    </label>
+    <input type="text" formControlName="rua" class="form-control">
+    <label>
+      Cidade: 
+    </label>
+    <input type="text" formControlName="cidade" class="form-control">
+    <label>
+      Estado: 
+    </label>
+    <input type="text" formControlName="estado" class="form-control">
+    <label>
+      CEP: 
+    </label>
+    <input type="text" formControlName="cep" class="form-control">
+  </div>
+  <p>
+    <button type="submit" class="btn btn-success">Mostrar Valores</button>
+  </p>
+  </form>
+  <p>
+    Formularios: {{dadosPessoais.status}}
+  </p>
+</div>
+
+
+<!-- <div class="form-control-feedback" *ngIf="f.email.$error && ( f.email.$dirty || f.email.$touched)">
+<p *ngIf="f.email.$error.required">Email Obrigatório</p>
+<p *ngIf="f.email.$error.emailDomino">Dominio diferente de udemy.com</p>
+</div> -->

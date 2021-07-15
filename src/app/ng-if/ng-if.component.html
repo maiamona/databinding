@@ -1,0 +1,7 @@
+<div *ngIf="mostrarVersaoAtual">
+<h4>Angular-6</h4>
+</div>
+<div *ngIf="!mostrarVersaoAtual">
+  <h4>Angular-js</h4>
+  </div>
+  <button (click)="mudarVersao()">mudarVersao</button>

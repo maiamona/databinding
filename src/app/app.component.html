@@ -1,20 +1,46 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    Aula de {{ title }}!
   </h1>
   <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<h2>Curso de {{curso}} </h2>
+<app-propetybinding></app-propetybinding>
+<app-eventbinding></app-eventbinding>
+<app-twowaydatabinding></app-twowaydatabinding>
+<app-classbinding></app-classbinding>
+<app-input [mestre]="comprar"></app-input>
+<h2>Angular é o melhor Framework de Javascript?</h2>
+<h3>Quantidade que concorda: {{concordo}}, Quantidade que não concorda: {{naoConcordo}}</h3>
+<table>
+  <thead>
+  <tr>
+    <th>NOME</th>
+    <th>CONCORDO</th>
+    <th>NÃO CONCORDO</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let Votante of Votantes">
+<td><app-votar [voto1]="Votante"></app-votar></td>
+<!-- <td><app-arquivo *ngFor="let si of sim" [tabsim]="si"></app-arquivo></td>
+<td><app-arquivo2 *ngFor="let no of nao" [tabnao]="no"></app-arquivo2></td> -->
+<td style="color: red;">Por fazer</td>
+<td></td>
+  </tr>
+</tbody>
+</table>
+<app-output *ngFor="let Votante of Votantes" (enviarVoto)="foiVotado($event)" [cazevo]="Votante"></app-output>
+<app-ng-if></app-ng-if>
+<app-ng-for></app-ng-for>
+<app-ng-switch></app-ng-switch>
+<app-lifecycle [life]="life"></app-lifecycle>
+<app-formulario></app-formulario><br><br>
+<app-formularioreativo></app-formularioreativo>
+<app-formularioreativogrupo></app-formularioreativogrupo>
+<app-formularioreativogrupoaninhado></app-formularioreativogrupoaninhado>
+<app-formulariomodelo></app-formulariomodelo>
+<app-pessoa></app-pessoa>
+
 
