@@ -11,7 +11,7 @@ export class EventbindingComponent implements OnInit {
 
   ngOnInit() {
   }
-exibirAlerta(){
+exibirAlerta() {
   alert('Evento disparado');
 }
 }

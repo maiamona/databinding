@@ -6,7 +6,7 @@ import { FormControl, NG_VALIDATORS, Validator, ValidatorFn } from '@angular/for
 @Directive({
   selector: '[appDiretivaemail][ngModel]',
   providers: [{
-    provide: NG_VALIDATORS, useValue:Validacao.validarEmailModelo(), useExisting: DiretivaemailDirective, multi:true
+    provide: NG_VALIDATORS, useValue: Validacao.validarEmailModelo(), useExisting: DiretivaemailDirective, multi: true
   }]
 })
 export class DiretivaemailDirective implements Validator {
@@ -14,7 +14,7 @@ export class DiretivaemailDirective implements Validator {
   constructor() {
     this.validator = Validacao.validarEmailModelo();
    }
-  validate(c: FormControl){
+  validate(c: FormControl) {
     return this.validator(c);
   }
 }

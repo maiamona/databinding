@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./propetybinding.component.css']
 })
 export class PropetybindingComponent implements OnInit {
-public urlimg: string = 'http://www.fundosanimais.com/Imagens/cavalos.jpg';
+public urlimg = 'http://www.fundosanimais.com/Imagens/cavalos.jpg';
   constructor() { }
 
   ngOnInit() {

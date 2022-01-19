@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pessoa.component.css']
 })
 export class PessoaComponent implements OnInit {
-  
+
   constructor( private pessoaService: PessoaService) {
-   
+
   }
 
   ngOnInit() {

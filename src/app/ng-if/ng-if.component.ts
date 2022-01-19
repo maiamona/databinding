@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ng-if.component.css']
 })
 export class NgIfComponent implements OnInit {
-mostrarVersaoAtual: boolean = false;
-mudarVersao(){
+mostrarVersaoAtual = false;
+mudarVersao() {
   this.mostrarVersaoAtual = !this.mostrarVersaoAtual;
 }
   constructor() { }

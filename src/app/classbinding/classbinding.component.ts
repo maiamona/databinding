@@ -8,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class ClassbindingComponent implements OnInit {
   public aplicar_classe = true;
   public aplicarStyle = true;
-  setarStyle(){
-    let styles = {
+  setarStyle() {
+    const styles = {
       'background-color': this.aplicarStyle ? 'red' : 'green',
       'font-weight': this.aplicarStyle ? 'bold' : 'normal'
-    }
+    };
     return styles;
   }
   constructor() { }

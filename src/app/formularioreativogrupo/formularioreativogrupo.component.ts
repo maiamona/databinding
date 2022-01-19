@@ -15,7 +15,7 @@ pessoaForm = new FormGroup(
     ultimoNome: new FormControl('')
   }
 );
-EnviarValores(){
+EnviarValores() {
   console.log(this.pessoaForm.value);
 }
   ngOnInit() {

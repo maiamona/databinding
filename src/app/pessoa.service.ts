@@ -7,11 +7,11 @@ import { Pessoa } from './pessoa';
 })
 export class PessoaService {
 
-  constructor(private logService:LogService) { }
-  recuperarPessoaLista(): Array<Pessoa>{
-    let pessoaLista: Array<Pessoa> = [];
-    pessoaLista.push(new Pessoa(1, "maiamona", 34, "Masculino", "manomona2@hotmail.com"));
-    pessoaLista.push(new Pessoa(1, "Tina", 32, "Femenino", "clementina@gmail.com"));
+  constructor(private logService: LogService) { }
+  recuperarPessoaLista(): Array<Pessoa> {
+    const pessoaLista: Array<Pessoa> = [];
+    pessoaLista.push(new Pessoa(1, 'maiamona', 34, 'Masculino', 'manomona2@hotmail.com'));
+    pessoaLista.push(new Pessoa(1, 'Tina', 32, 'Femenino', 'clementina@gmail.com'));
     return pessoaLista;
   }
 }

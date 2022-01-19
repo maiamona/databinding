@@ -24,8 +24,8 @@ export class FormularioreativogrupoaninhadoComponent implements OnInit {
     console.log(this.dadosPessoais.value);
   }
   constructor(private fb: FormBuilder) { }
-  
- get f(){return this.dadosPessoais.controls}
+
+ get f() {return this.dadosPessoais.controls; }
   ngOnInit() {
     this.dadosPessoais = this.fb.group(
       {

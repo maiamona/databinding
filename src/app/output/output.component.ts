@@ -7,16 +7,16 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
   styleUrls: ['./output.component.css']
 })
 export class OutputComponent implements OnInit {
-@Output() 
+  constructor() { }
+@Output()
 enviarVoto = new EventEmitter<boolean>();
 
 foiVotado_filho = false;
-vote(concorda: boolean){
+@Input('cazevo')garcia: Array<string>;
+vote(concorda: boolean) {
 this.enviarVoto.emit(concorda);
 this.foiVotado_filho = true;
 }
-@Input('cazevo')garcia: Array<string>;
-  constructor() { }
 
   ngOnInit() {
   }

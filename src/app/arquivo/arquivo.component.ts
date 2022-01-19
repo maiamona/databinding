@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ArquivoComponent implements OnInit {
   @Input('tabsim')um: Array<number>;
-  
+
   constructor() { }
 
   ngOnInit() {

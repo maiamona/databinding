@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioreativoComponent implements OnInit {
 nome = new FormControl('Angular');
-atualizarNome(){
+atualizarNome() {
   this.nome.setValue('Henrique');
 }
   constructor() { }

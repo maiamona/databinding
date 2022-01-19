@@ -10,11 +10,11 @@ export class AppComponent {
   curso = 'Angular 6';
   comprar = 'principal';
   Votantes = ['Jane', 'Mona', 'Bastos', 'Menito', 'Mixa', 'Lucy'];
-  life = 'Gancho de vida'
+  life = 'Gancho de vida';
   concordo = 0;
   naoConcordo = 0;
 
-  foiVotado(concorda: boolean){
+  foiVotado(concorda: boolean) {
 concorda ? this.concordo++ : this.naoConcordo++;
 
   }

@@ -17,7 +17,7 @@ export class ObservablesComponent implements OnInit {
   //     .then(res => res.json())
   //   .catch(err => Observable.throw(err.message))
   // }
-  
+
   // Utilizar Observable
   // recuperarPessao(): Observable<Pessoa[]>{
   //   return this.http.get("url")
